@@ -1,0 +1,22 @@
+/* code {
+  display: block;
+  width: fit-content;
+  padding: 16px;
+  border-radius: 8px;
+} */
+
+html {
+  scroll-behavior: smooth;
+}
+
+[class^="out-"] {
+  min-height: calc(1em * 1.6);
+}
+
+.panel {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.formated {
+  white-space: pre-wrap;
+}

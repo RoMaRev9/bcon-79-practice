@@ -130,6 +130,17 @@ out81.textContent = ar8.length;
 
 // Task-9
 
+const ar9 = ["Roman", "Lion", "12", "August"];
+const out9 = document.querySelector(".out-9");
+  const btn9 = document.querySelector(".out-9");
+
+  btn9.onclick = fn9;
+
+  function fn9() {
+    const lastI = ar9.length - 1;
+    out9.textContent = ar9[lastI];
+  }
+
 // Task-10
 
 // Task-11

@@ -50,6 +50,16 @@ const obj7 = {
   e: 22,
 };
 
+// const btn7 = document.querySelector(".b-7");
+// const out7 = document.querySelector(".out-7");
+// btn7.onclick = fn7;
+
+// function fn7() {
+//   const searchKey = document.querySelector(".i-7").value;
+//   console.log("🚀 ~ fn7 ~ searchKey:", searchKey);
+//   out7.innerHTML = +(searchKey in obj7);
+// }
+
 // Task 8
 const obj8 = {
   b: 17,

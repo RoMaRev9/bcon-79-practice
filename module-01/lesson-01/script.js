@@ -26,6 +26,7 @@ console.log("🚀 ~ out8:", out8);
 out8.textContent = "task-8";
 // 9
 const out9 = document.querySelector(".out-9");
+const title = "world";
 console.log("🚀 ~ out9:", out9);
 out9.textContent = "world";
 // 10

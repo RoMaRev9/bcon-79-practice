@@ -21,6 +21,7 @@ const el = "3";
 const f1 = 5;
 const out4 = document.querySelector(".out-4");
 console.log("🚀 ~ out4:", out4);
+out4.textContent = el + f1;
 // 5
 const e2 = 3;
 const f2 = 0;
@@ -80,3 +81,68 @@ function t11() {
   out11.textContent = userInput11 + 55;
 }
 // 12
+const input121 = document.querySelector(".i-12-1");
+const input122 = document.querySelector(".i-12-2");
+const btn12 = document.querySelector(".b-12");
+const out12 = document.querySelector(".out-12");
+btn12.onclick = fn12;
+function fn12() {
+  const userinput121 = input121.value;
+  const userinput122 = input122.value;
+  console.log("🚀 ~ fn12 ~ userinput122:", userinput122);
+  out12.textContent = `Hello ${userinput121} ${userinput122}`;
+}
+// 13
+const input131 = document.querySelector(".i-13-1");
+const input132 = document.querySelector(".i-13-2");
+const btn13 = document.querySelector(".b-13");
+const out13 = document.querySelector(".out-13");
+btn13.onclick = fn13;
+function fn13() {
+  userInput131 = input131.value;
+  let a = input131.value;
+  userInput132 = input132.value;
+  let b = input132.value;
+  out13.textContent = +a + +b;
+}
+// 14
+const input14 = document.querySelector(".i-14");
+const btn14 = document.querySelector(".b-14");
+btn14.onclick = fn14;
+function fn14() {
+  input14.value = `Go`;
+}
+// 15
+const input15 = document.querySelector(".i-15");
+const btn15 = document.querySelector(".b-15");
+btn15.onclick = fn15;
+function fn15() {
+  input15.style.border = "4px solid red";
+}
+
+// 16
+// const input161 = document.querySelector(".i-16-1");
+// const input162 = document.querySelector(".i-16-2");
+// const btn16 = document.querySelector(".b-16");
+// const out16 = document.querySelector(".out-16");
+// btn16.onclick = fn16;
+// function fn16() {
+//   const userInput161 = input161.velue;
+//   const userInput162 = input162.velue;
+//   // out16.innerHTML = input161 + input162;
+//   out16.innerHTML = userInput161 + userInput162;
+// }
+function t16() {
+  // Получаем значения из инпутов
+  const val1 = document.querySelector(".i-16-1").value;
+  const val2 = document.querySelector(".i-16-2").value;
+
+  // Выводим результат в .out-16
+  // Поскольку мы не переводим в числа, оператор + выполнит конкатенацию строк
+  document.querySelector(".out-16").innerHTML = val1 + val2;
+}
+
+// Слушатель события для кнопки
+document.querySelector(".b-16").onclick = t16;
+
+//  17

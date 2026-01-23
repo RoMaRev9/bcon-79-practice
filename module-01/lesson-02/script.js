@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // 1
 const a = 7;
 const b = 9;
@@ -146,3 +147,5 @@ function t16() {
 document.querySelector(".b-16").onclick = t16;
 
 //  17
+=======
+>>>>>>> 1ad85f2690bd7729642e34918006921a908828b6

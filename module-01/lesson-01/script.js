@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // 1
 const user = "Roman";
 console.log(user);
@@ -82,5 +81,3 @@ console.log("🚀 ~ out19:", out19);
 const out20 = document.querySelector(".out-20");
 console.log("🚀 ~ out20:", out20);
 out20.textContent = "<h2>Hi</h2>";
-=======
->>>>>>> 1ad85f2690bd7729642e34918006921a908828b6

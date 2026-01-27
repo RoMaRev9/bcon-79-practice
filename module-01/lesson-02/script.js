@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // 1
 const a = 7;
 const b = 9;
@@ -50,7 +49,7 @@ btn8.onclick = fn8;
 function fn8() {
   const userInput = input8.value;
   out8.textContent = userInput;
-  input8.value = "";
+  // input8.value = "";
 }
 // 9
 const btn9 = document.querySelector(".b-9");
@@ -62,6 +61,7 @@ function t9() {
   const userInput9 = input9.value;
   out9.textContent = userInput9;
   input9.value = "";
+  // очищення input після натискання кнопки
 }
 // 10
 const btn10 = document.querySelector(".b-10");
@@ -147,5 +147,21 @@ function t16() {
 document.querySelector(".b-16").onclick = t16;
 
 //  17
-=======
->>>>>>> 1ad85f2690bd7729642e34918006921a908828b6
+const input17 = document.querySelector(".i-17");
+const out171 = document.querySelector(".i-171");
+const out172 = document.querySelector(".i-172");
+const out173 = document.querySelector(".i-173");
+const btn17 = document.querySelector(".b-17");
+btn17.onclick = fn17;
+function fn17() {
+  let userinput17 = input17.value;
+  console.log("🚀 ~ fn17 ~ userinput17:", userinput17);
+  out171.textContent = Number(userinput17);
+  out172.textContent = parseInt(userinput17);
+  out173.textContent = parseFloat(userinput17);
+}
+// let data = document.querySelector('.i-17').value;
+
+//     document.querySelector('.out-17-1').innerHTML = parseInt(data);
+//     document.querySelector('.out-17-2').innerHTML = parseFloat(data);
+//     document.querySelector('.out-17-3').innerHTML = +data;

@@ -22,7 +22,14 @@ document.querySelector(".out-3").append(goods.draw());
 //  Task 4
 
 //  Task 5
-
+const goods = new InheriteGoods(
+  "apple",
+  23.5,
+  "https://images.pexels.com/photos/102104/pexels-photo-102104.jpeg",
+  400,
+  true
+);
+console.log(goods);
 //  Task 6
 
 //  Task 7

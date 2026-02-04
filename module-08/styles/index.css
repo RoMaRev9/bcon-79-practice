@@ -1,0 +1,55 @@
+/* BOOTSTRAP BLOG PAGE */
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  .card-meta-tags {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .tags-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(50px, 80px));
+    gap: 0.5rem;
+  }
+
+  .card-meta-likes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(50px, 80px));
+    gap: 0.5rem;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+  }
+
+  .card-meta-views {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+}
+
+.bi:before {
+  font-size: 1.2rem;
+  color: cornflowerblue;
+}
+
+.search-form {
+  max-width: 20rem;
+
+  .bi:before {
+    color: currentColor;
+  }
+}

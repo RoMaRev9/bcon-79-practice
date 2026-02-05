@@ -1,12 +1,6 @@
 // Task 1
 // При натисканні кнопки .b-1 спрацьовує функція f1. Функція повинна прочитати вміст .i-1 і порівняти його з числом 4 (порівняння ==). Результат порівняння - true або false виведіть у .out-1.
-const input1 = document.querySelector{".i-1"};
-const btn1 = document.querySelector(".b-1");
-const out1 = document.querySelector(".out-1");
-btn1.onclick = fn1;
-function fn1(){
 
-}
 // Task 2
 // Дані дві змінні a21 і a22. При натисканні кнопки .b-2, запускається функція f2. Функція повинна порівняти змінні за допомогою if else і вивести в .out-2 число, яке більше. Варіант рівності змінних не розглядаємо.
 
@@ -31,31 +25,7 @@ let a22 = 32;
 
 // Task 8.
 // Дано select s-8, який містить 3 значення: 1, 2, 3. Дана кнопка b-8. При її натисканні спрацьовує функція f8. Функція повинна отримати обране в select число, потім за допомогою switch case порівняти його по черзі з 1, 2, 3. І якщо вибрано число 1, то вивести в .out-8 рядок one, якщо 2 - two, якщо 3 - three. Нагадую - це програмування. Як зазначено в завданні - так і виводимо. Тобто Three з великої літери - помилка!
-// const select8 = document.querySelector(".s-8");
-// const btn8 = document.querySelector(".b-8");
-// const out8 = document.querySelector(".out-8");
-// btn8.onclick = fn8;
-// function fn8(){
-//   const value = select8.selectedOptions[0].value;
-// }
-function f8() {
-    // Отримуємо значення з select
-    let selectValue = document.querySelector('.s-8').value;
-    let out = document.querySelector('.out-8');
 
-    // Використовуємо switch для порівняння
-    switch (selectValue) {
-        case '1':
-            out.textContent = 'one';
-            break;
-        case '2':
-            out.textContent = 'two';
-            break;
-        case '3':
-            out.textContent = 'three';
-            break;
-    }
-}
 // Task 9
 // Є input з класом .i-9, куди користувач може ввести номер квартири. Є кнопка .b-9, яка запускає функцію f9. Функція повинна вивести в .out-9 номер під'їзду, в якому знаходиться квартира.
 //  якщо від 1 включно до 32 включно - то вивести цифру 1

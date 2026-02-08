@@ -4,6 +4,9 @@ ul {
   padding: 0;
   list-style: none;
 }
+img {
+  object-fit: cover;
+}
 
 .card-meta {
   display: flex;

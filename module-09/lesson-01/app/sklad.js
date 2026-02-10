@@ -1,3 +1,8 @@
+                    
+                    js>stringify=JSON>parse=js
+
+
+
 //! App store
 const store = {
   notes: [
@@ -282,3 +287,10 @@ if (savedNotes) {
   store.notes = savedNotes;
   renderNotes(store.notes);
 }
+--------------------------------------------------------
+https://github.com/OleksandrProtchenko/bcon-79-practice
+=============================
+https://docs.google.com/spreadsheets/d/1nOa1jHR-3bqoSYLumuP9wtZ5HVCVOO9xDJYE-TQm1Kc/edit?usp=sharing
+=______________________________________________https://github.com/OleksandrProtchenko/bcon-79-practice/tree/main
+_________________________________________________
+https://github.com/vjosik/bcon-79-practice

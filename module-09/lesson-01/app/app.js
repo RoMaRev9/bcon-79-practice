@@ -1,30 +1,18 @@
+import refs from "./refs.js";
+import { store } from "./store.js";
+import { STORAGE_KEY } from "./variables.js";
+
 // app store
 
-const store = {
-  notes: [
-    // { id: 1, name: "Mango", body: "Mango is cute" },
-    // { id: 2, name: "Ajax", body: "Ajax is awesome" },
-    // { id: 3, name: "Poly", body: "Poly is nice" },
-  ],
-  appTheme: "light",
-};
-
 const g = new GenerateId();
-const STORAGE_KEY = { notes: "notes", appsTheme: "appsTheme" };
-// Elements
-const notesList = document.querySelector(".js-notes-list");
-const card = document.querySelector(".js-card");
-const form = document.querySelector(".js-form");
-const btnDelete = document.querySelector(".js-delete-btn");
-const themeToggler = document.querySelector(".js-theme-toggler");
 
 setTheme(loadLS(STORAGE_KEY.appsTheme));
 
 // Listeners
-form.addEventListener("submit", onFormSubmit);
-notesList.addEventListener("click", onBtnDeleteClick);
+refs.form.addEventListener("submit", onFormSubmit);
+refs.notesList.addEventListener("click", onBtnDeleteClick);
 renderNotes(loadLS(STORAGE_KEY.notes));
-themeToggler.addEventListener("click", onTogglerClick);
+refs.themeToggler.addEventListener("click", onTogglerClick);
 // Functions
 function onFormSubmit(event) {
   event.preventDefault();
@@ -41,14 +29,14 @@ function onFormSubmit(event) {
   saveLS(STORAGE_KEY.notes, store.notes);
 
   // Insert markup to list
-  notesList.insertAdjacentHTML("beforeend", createNote(noteData));
+  refs.notesList.insertAdjacentHTML("beforeend", createNote(noteData));
 
   // Reset form
   form.reset();
 }
 function renderNotes(notes = []) {
   const markup = notes.map(createNote).join("");
-  notesList.innerHTML = markup;
+  refs.notesList.innerHTML = markup;
 }
 function createNote({ id, name, body }) {
   return `
@@ -68,8 +56,8 @@ function createNote({ id, name, body }) {
 function setTheme(theme) {
   const currentTheme = theme ?? "light";
   currentTheme === "light"
-    ? themeToggler
-    : themeToggler.setAttribute("checked", "");
+    ? refs.themeToggler
+    : refs.themeToggler.setAttribute("checked", "");
   themeToggler.value = currentTheme;
   document.documentElement.setAttribute("data-bs-theme", currentTheme);
   store.appTheme = currentTheme;

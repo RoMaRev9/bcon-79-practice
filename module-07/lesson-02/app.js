@@ -1,6 +1,47 @@
-// const form = document.querySelector(".header-form");
-// const tasksList = document.querySelector(".tasks-list");
+//  Module-7.lesson-2.
 
+const form = document.querySelector(".header-form");
+const tasksList = document.querySelector(".tasks-list");
+const tasks = [];
+
+init();
+form.addEventListener("submit", onFormSubmit);
+
+function onFormSubmit(event) {
+  event.preventDefault(); // Запобігаємо перезавантаженню сторінки
+
+  const taskName = event.target.elements.taskName.value.trim();
+  const taskDescr = event.target.elements.taskDescription.value.trim();
+
+  if (!taskName || !taskDescr) {
+    return alert("Всі поля мають бути заповнені!!!");
+  }
+  const task = {
+    id: tasks.length + 1,
+    taskName,
+    taskDescr,
+  };
+  tasks.push(task);
+  tasksList.insertAdjacentHTML("beforeend", createTaskMarkup(task));
+  event.target.reset();
+}
+
+function createTaskMarkup(task) {
+  return `
+    <li class="task-list-item">
+      <button class="task-list-item-btn"
+       data-id="${task.id}">Delete</button>
+      <h3>${task.taskName}</h3>
+      <p>${task.taskDescr}</p>
+    </li>`;
+}
+
+function init() {
+  if (tasks.length === 0) {
+    return;
+  }
+  tasksList.innerHTML = tasks.map(createTaskMarkup).join("");
+}
 // const store = {
 //   tasks: [
 //     { id: 1, taskName: "task1", taskDescr: "finish task 1" },
@@ -27,8 +68,6 @@
 //     </li>`;
 // }
 
-// function onFormSubmit(event) {
-//   event.preventDefault();
 //   // Переконайтеся, що в HTML name="taskName" та name="taskDescription"
 //   const { taskName, taskDescription } = event.target.elements;
 //   const name = taskName.value.trim();
@@ -53,7 +92,6 @@
 //   render();
 // }
 
-// form.addEventListener("submit", onFormSubmit);
 // tasksList.addEventListener("click", onTasksClick);
 
 // init();
@@ -72,38 +110,38 @@
 //  form
 
 // --------------------------------------
-const headerForm = document.querySelector("#task-form");
-const taskList = document.querySelector("#task-list"); // Додано =
-const tasks = [];
+// const headerForm = document.querySelector("#task-form");
+// const taskList = document.querySelector("#task-list"); // Додано =
+// const tasks = [];
 
-headerForm.addEventListener("submit", onHeaderFormSubmit);
+// headerForm.addEventListener("submit", onHeaderFormSubmit);
 
-function onHeaderFormSubmit(event) {
-  event.preventDefault();
+// function onHeaderFormSubmit(event) {
+//   event.preventDefault();
 
-  const form = event.target;
-  const taskName = form.elements.taskName.value;
-  const taskDescription = form.elements.taskDescription.value; // Додано =
+//   const form = event.target;
+//   const taskName = form.elements.taskName.value;
+//   const taskDescription = form.elements.taskDescription.value; // Додано =
 
-  const task = {
-    name: taskName,
-    description: taskDescription,
-    id: Date.now(),
-  }; // Використано фігурні дужки {}
+//   const task = {
+//     name: taskName,
+//     description: taskDescription,
+//     id: Date.now(),
+//   }; // Використано фігурні дужки {}
 
-  tasks.push(task);
-  addTask(task);
-  form.reset(); // Очищуємо форму після додавання
-}
+//   tasks.push(task);
+//   addTask(task);
+//   form.reset(); // Очищуємо форму після додавання
+// }
 
-function addTask(task) {
-  // Додано фігурну дужку {
-  const taskMarkup = `
-    <li class="task-list-item">
-      <button id="${task.id}" class="task-list-item-btn">Delete</button>
-      <h3>${task.name}</h3>
-      <p>${task.description}</p>
-    </li>`; // Виправлено дужку у task.name та лапки
+// function addTask(task) {
+//   // Додано фігурну дужку {
+//   const taskMarkup = `
+//     <li class="task-list-item">
+//       <button id="${task.id}" class="task-list-item-btn">Delete</button>
+//       <h3>${task.name}</h3>
+//       <p>${task.description}</p>
+//     </li>`; // Виправлено дужку у task.name та лапки
 
-  taskList.insertAdjacentHTML("beforeend", taskMarkup);
-}
+//   taskList.insertAdjacentHTML("beforeend", taskMarkup);
+// }

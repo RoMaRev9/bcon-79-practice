@@ -100,9 +100,9 @@ const btn13 = document.querySelector(".b-13");
 const out13 = document.querySelector(".out-13");
 btn13.onclick = fn13;
 function fn13() {
-  userInput131 = input131.value;
+  // const userInput131 = input131.value;
   let a = input131.value;
-  userInput132 = input132.value;
+  // const userInput132 = input132.value;
   let b = input132.value;
   out13.textContent = +a + +b;
 }
@@ -148,20 +148,64 @@ document.querySelector(".b-16").onclick = t16;
 
 //  17
 const input17 = document.querySelector(".i-17");
-const out171 = document.querySelector(".i-171");
-const out172 = document.querySelector(".i-172");
-const out173 = document.querySelector(".i-173");
+const out171 = document.querySelector(".out-17-1");
+const out172 = document.querySelector(".out-17-2");
+const out173 = document.querySelector(".out-17-3");
 const btn17 = document.querySelector(".b-17");
 btn17.onclick = fn17;
 function fn17() {
   let userinput17 = input17.value;
   console.log("🚀 ~ fn17 ~ userinput17:", userinput17);
-  out171.textContent = Number(userinput17);
-  out172.textContent = parseInt(userinput17);
-  out173.textContent = parseFloat(userinput17);
+  // console.log("🚀 ~ fn17 ~ userinput17:", userinput17);
+  out171.innerHTML = Number.parseFloat(userinput17);
+  out172.innerHTML = parseInt(userinput17);
+  out173.innerHTML = parseFloat(userinput17);
 }
 // let data = document.querySelector('.i-17').value;
 
 //     document.querySelector('.out-17-1').innerHTML = parseInt(data);
 //     document.querySelector('.out-17-2').innerHTML = parseFloat(data);
-//     document.querySelector('.out-17-3').innerHTML = +data;
+//     document.querySelector('.out-17-3').innerHTML = +data; =
+
+// task 18
+const btn18 = document.querySelector(".b-18");
+const input18 = document.querySelector(".i-18");
+const out18 = document.querySelector(".out-18");
+btn18.onclick = f18;
+function f18() {
+  const a = Number.parseFloat(input18.value);
+  out18.textContent = parseFloat(a);
+  input18.value = "";
+}
+
+// task 19
+const input191 = document.querySelector(".i-19-1");
+const input192 = document.querySelector(".i-19-2");
+const btn19 = document.querySelector(".b-19");
+const out191 = document.querySelector(".out-19");
+console.log("🚀 ~ out191:", out191);
+btn19.onclick = fn19;
+function fn19() {
+  // const userInput131 = input131.value;
+  // let a = input191.value;
+  // const userInput132 = input132.value;
+  // let b = input192.value;
+  out191.textContent =
+    Number.parseInt(input191.value) + Number.parseInt(input192.value);
+  input191.value = "";
+  input192.value = "";
+}
+
+// Task 20
+// 1. Отримуємо елементи
+const btn20 = document.querySelector(".b-20");
+const out20 = document.querySelector(".out-20");
+btn20.onclick = fn20;
+// 2. Створюємо змінну-лічильник
+let count = 0;
+
+// 3. Функція для обробки кліку
+function fn20() {
+  count = count + 1; // Збільшуємо на 1
+  out20.textContent = count; // Виводимо в блок
+}

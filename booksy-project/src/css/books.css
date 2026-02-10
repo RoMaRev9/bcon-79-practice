@@ -1,0 +1,137 @@
+.books .container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 24px;
+}
+.books-sidebar {
+}
+.sidebar {
+}
+.sidebar-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #0b0500;
+  margin-bottom: 24px;
+}
+.sidebar-list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 0px;
+}
+.sidebar-item {
+}
+.sidebar-btn {
+  line-height: 1.5;
+  color: #0b0500;
+  padding: 8px 5px;
+  text-align: left;
+  transition: 0.15s;
+
+  &:hover {
+    outline: 1px solid #0b0500;
+    border-radius: 4px;
+    background: #ea8d50;
+  }
+}
+.books-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px 24px;
+}
+.books-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 16px;
+}
+.books-item-cover {
+  border-radius: 8px;
+  overflow: hidden;
+}
+.books-item-ill {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.books-item-body {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 16px;
+  width: 100%;
+}
+.books-item-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  text-transform: capitalize;
+  color: #0b0500;
+}
+.books-item-descr {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #0b0500;
+}
+.books-item-price {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #0b0500;
+  grid-row: 1/3;
+  grid-column: 2/3;
+  text-align: right;
+}
+.books-item-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 8px;
+  border: 1px solid #0b0500;
+  border-radius: 4px;
+  padding: 8px 20px;
+  width: 100%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #0b0500;
+  transition: 0.15s;
+
+  &:hover {
+    outline: 1px solid #0b0500;
+    border-radius: 4px;
+    background: #ea8d50;
+  }
+}
+/**
+  |============================
+  | include css partials with
+  | default @import url()
+  |============================
+*/
+/* Common styles */
+@import url("./reset.css");
+@import url("./container.css");
+
+/* Sections style */
+@import url("./header.css");
+@import url("./footer.css");
+@import url("./books.css");
+
+Alex Protchenko 15:52 body {
+  background: #fceee6;
+  font-family: sans-serif;
+
+  color: #0b0500;
+}
+button {
+  cursor: pointer;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
